@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="bgMusic" loop>
+    <source src="assets/bg-music.mp3" type="audio/mpeg">
+  </audio>
+
+  <button type="button" class="music-toggle" id="musicToggle" onclick="toggleMusic()">
+    ♪ تشغيل الموسيقى
+  </button>
+
+  <div class="background-glow glow-1"></div>
+  <div class="background-glow glow-2"></div>
+
+  <main class="container">
+    <!-- Welcome Screen -->
+    <section class="card active" id="screen-0">
+      <img src="assets/welcome.gif.gif" class="question-gif" alt="Welcome animation">
+      <h1>Hey HAGER ❤️</h1>
+      <p>عايز اسالك كام سؤال😋
+      </p>
+      <button type="button" onclick="nextScreen()">Start</button>
+    </section>
+
+    <!-- Question 1 -->
+    <section class="card" id="screen-1">
+      <img src="assets/Q1.gif" class="question-gif" alt="Question 1 animation">
+      <h2>مبدايا كل سنه وانتي طيبه</h2>
+      <h2></h2>ايه اكتر حاجه ممكن تفرحك ف يوم زي دا؟</h2>
+      <p"لل </p>
+      <div class="btn-group">
+        <button type="button" onclick="nextScreen()">🎁 هدية بسيطة بس من القلب</button>
+        <button type="button" onclick="nextScreen()">📸 صور وذكريات حلوة</button>
+        <button type="button" onclick="nextScreen()">🍰 خروجة حلوة ومزاج رايق</button>
+        <button type="button" onclick="nextScreen()">💬 كلام لطيف يفضل في الذاكرة</button>
+      </div>
+      <button type="button" class="back-btn" onclick="prevScreen()">← Back</button>
+    </section>
+
+    <!-- Question 2 -->
+    <section class="card" id="screen-2">
+      <img src="assets/Girl Car GIF.gif" class="question-gif" alt="Question 2 animation">
+      <h2></h2>
+      <p>جاهزه تشوفي حاجه ف الطرش منه😂❤️</p>
+      <div class="btn-group">
+        <button type="button" onclick="nextScreen()">😁جاهزه</button>
+        <button type="button" onclick="nextScreen()">اما نشوف👀</button>
+      </div>
+      <button type="button" class="back-btn" onclick="prevScreen()">← Back</button>
+    </section>
+
+    <!-- Promise -->
+    <section class="card" id="screen-3">
+      <img src="assets/ok.png" class="question-gif" alt="Promise animation">
+      <h2>حاجه اخيره✨</h2>
+      <p>موافقه نبقي سوا لحد مانبقي عواجيز😂❤️</p>
+      <label class="checkbox">
+        <input type="checkbox" id="promiseCheck">
+        <span>موافقه ❤️</span>
+      </label>
+      <div class="btn-group">
+        <button type="button" onclick="checkPromise()">Continue</button>
+      </div>
+      <button type="button" class="back-btn" onclick="prevScreen()">← Back</button>
+      <p id="promiseWarning" class="warning-text" aria-live="polite"></p>
+    </section>
+
+    <!-- Gift -->
+    <section class="card" id="screen-4">
+      <div class="gift-container">
+        <h2 class="surprise-text">دوسي ع المفاجأة 🎁</h2>
+        <img src="assets/MEDO.png" class="giftbox" alt="Gift box" onclick="nextScreen()">
+        <button type="button" class="back-btn" onclick="prevScreen()">← Back</button>
+      </div>
+    </section>
+
+    <!-- Final Love Letter -->
+    <section class="card" id="screen-5">
+      <h1>كل سنه وانتي طيبه يجوجو🥹</h1>
+      <p class="letter">
+       عشرت عمري واغلاهم كبرت سنه نعرف بعض حرفيا م ونا عندي 8 
+       كبرنا واتربينا مع بعض وكانت احلي ايام حياتي بجد عشرت 11سنه 
+        <br>
+       بجد م مصدق الوقت عدي ازاي وكبرنا امتي بس بجد ربنا ميحرمني منك ياهجور
+        <br>
+       وعقبال مانبقي عواجيز سوا 😂❤️
+      </p>
+
+      <div class="gallery">
+        <div class="photo-card">
+          <img src="assets/img1.jpg" alt="Memory 1">
+          <p>احلي صوره لينا   ❤️</p>
+        </div>
+        <div class="photo-card">
+          <img src="assets/img2.jpg" alt="Memory 2">
+          <p>الصورة دي بحبها جدًا</p>
+        </div>
+        <div class="photo-card">
+          <img src="assets/img3.PNG" alt="Memory 3">
+          <p>   طبعا مينفعش نتصور صوره عدله وهاجر موجوده😂</p>
+        </div>
+        <div class="photo-card">
+          <img src="assets/img4.jpeg" alt="Memory 4">
+          <p>اي يعم الحلويات دي</p>
+        </div>
+        <div class="photo-card">
+          <img src="assets/img5.jpeg" alt="Memory 5">
+          <p>اصحي يعم 😂❤️</p>
+        </div>
+        <div class="photo-card">
+          <img src="assets/img6.jpeg" alt="Memory 6">
+          <p>هنا كنتي قمر بجد</p>
+        </div>
+        <div class="photo-card">
+          <img src="assets/img7.jpeg" alt="Memory 7">
+          <p> كان يوم طرششششش🤩</p>
+        </div>
+        <div class="photo-card">
+          <img src="assets/img8.jpeg" alt="Memory 8">
+          <p></p>اطفال الجنه😂😂😂</p>
+        </div>
+        <div class="photo-card">
+          <img src="assets/img9.png" alt="Memory 9">
+          <p>     احلي 18 سنه ع الارض ❤️</p>
+        </div>
+      </div>
+
+      <h2 class="final-text">كل سنه وانت طيبه ياهجورتي ❤️</h2>
+      <button type="button" class="back-btn" onclick="prevScreen()">← Back</button>
+    </section>
+  </main>
+
+  <div class="image-modal" id="imageModal" onclick="closeImageModal()">
+    <img id="modalImage" class="modal-image" src="" alt="Preview" onclick="event.stopPropagation()">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
